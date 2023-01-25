@@ -1,0 +1,153 @@
+:root {
+    font-size: 12px;
+    --primary-bg-color: #001a30;
+    --strong-color: #005BC0;
+    --header-bg-color: #001425;
+    --default-font: 'Poppins', sans-serif;
+    --header-font: 'DM sans', sans-serif;
+
+}
+
+body {
+    margin: 0 auto;
+    font-family: var(--default-font);
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    background-color: var(--header-bg-color);
+    height: 90px;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+
+header a {
+    font-family: var(--header-font);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.container {
+    padding-top: 100px;
+    background-color: var(--primary-bg-color);
+    height: 100vh;
+
+}
+
+
+.home {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.picture img {
+    border-radius: 41% 59% 71% 29% / 43% 41% 59% 57%;
+    border: 8px solid #fff;
+    width: 25vw;
+}
+
+.greet {
+    width: 40%;
+    border-left: 1px solid #fff;
+}
+
+.greet h1 {
+    text-align: center;
+    font-size: 5rem;
+    color: #fff;
+}
+
+strong {
+    color: var(--strong-color);
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+}
+
+.container h3 {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.resume {
+    padding: 20px;
+    width: 40%;
+}
+
+.resume p {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.skills {
+    width: 50%;
+    border: 1px solid #fff;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.title-techs {
+    height: 50px;
+    border-bottom: 1px solid #fff;
+
+}
+
+.title-techs p {
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 0;
+}
+
+.techs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tech {
+    width: 25%;
+    text-align: center;
+}
+
+.tech img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    margin: 25px auto;
+}
+
+.tech p {
+    display: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
