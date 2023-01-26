@@ -392,6 +392,7 @@ strong {
     .about {
         overflow: hidden;
         height: auto;
+        padding-bottom: 60px;
     }
 
     .data {
@@ -419,6 +420,11 @@ strong {
         overflow: hidden;
         overflow-x: auto;
         padding-bottom: 20px;
+    }
+
+    .projects {
+        height: auto;
+        padding-bottom: 60px;
     }
 
     .contact {
