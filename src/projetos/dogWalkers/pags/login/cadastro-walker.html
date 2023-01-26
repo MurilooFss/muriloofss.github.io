@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro Walker - Dog Walkers</title>    
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="../../js/bootstrap.js"></script>
+        <link rel="stylesheet" type="text/css" href="cadastro.css">
+    </head>
+    <body>
+        <div class="container-fluid" style="background-color: #404040;">
+            <div class="row">
+                <div class="col-xl-5" style="margin: auto; padding: 0%;">
+                    <div class="header" style="width: max-content;">
+                        <div class="imagem"><a href="../../index.html" title="Início"><img src="../../img/logo.png" alt="logo"/></a></div>
+                        <div class="texto"><a href="../../index.html" title="Início"><p>dog walkers</p></a></div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Header-->
+       <div class="container" style="max-width: 900px;">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="margin: auto;">
+                    <form action="parabens.html" method="POST">
+                        <fieldset >
+                            <div class="imagem2"><img src="../../img/logo.png" alt="Logo"></div>
+                            <p class="boas-vindas">Cadastro de usuário</p>
+                            <p class="boas-vindas2">Para poder contratar serviços, é simples! <br> Preencha o formulário e anexe os seus documentos.</p> 
+                            <div class="row">
+                                <div class="col-xl-10 titulo" style="margin: auto;">
+                                    <p>Instruções para preenchimento do cadastro:</p>
+                                </div>
+                                <div class="col-xl-10" style="margin: auto;">
+                                    <ul>
+                                        <li>
+                                            <p>Todos os campos são obrigatórios;</p>
+                                        </li>
+                                        <li>
+                                            <p>Preencha os campos como mostrado nos respectivos exemplos;</p>
+                                        </li>
+                                        <li>
+                                            <p>Se existirem informações incorretas no formulário o cadastro será recusado;</p>
+                                        </li>
+                                        <li>
+                                            <p>Por questões de segurança, todos os formulários passam por um período de análise de 5 dias úteis. Após esse período, avisaremos por email se seu cadastro foi aprovado.</p>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="formulario-cadastro">
+                                <p class="boas-vindas">Dados pessoais:</p>
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <label for="nome">Nome: </label>    
+                                    </div>
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <input class="dados" type="text" id="nome" placeholder="Nome completo..."  >
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 cols-sm-12" style="padding: 0%;">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                    <label for="Idade">Idade:</label>    
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                    <input class="dados" type="number" id="Idade"  >
+                                                </div>  
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 cols-sm-12">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <label for="Data de nascimento">Data de nascimento:</label>
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <input class="dados" type="date" id="Data de nascimento"  >
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <label>Foto de perfil:</label>
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <label class="fake-input" for='input-file6'>Selecionar um arquivo &#10097;</label>
+                                                    <input class="button-file" id='input-file6'   type='file' value=''/>
+                                                    <span id='file-name6'></span>                                                    
+                                                </div>
+                                                <script type="text/javascript">
+                                                    
+                                                            var $input    = document.getElementById('input-file6'),
+                                                        $fileName6 = document.getElementById('file-name6');
+
+                                                    $input.addEventListener('change', function(){
+                                                    $fileName6.textContent = this.value;
+                                                    });
+    
+                                                </script>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 cols-sm-12">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <label for="sexo1">Sexo:</label>
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <select class="dados" name="sexo1" id="sexo">
+                                                        <option value="0">Selecione</option>
+                                                        <option value="1">Masculino</option>
+                                                        <option value="2">Feminino</option>
+                                                        <option value="3">Outro</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                </div>                               
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12" style="padding: 0%;">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                    <label for="cpf">CPF:</label>   
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                    <input class="dados" type="number" id="cpf"   placeholder="00000000000">
+                                                </div>  
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <label>Cópia CPF:</label>
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <label class="fake-input" for='input-file'>Selecionar um arquivo &#10097;</label>
+                                                    <input class="button-file" id='input-file'   type='file' value=''/>
+                                                    <span id='file-name'></span>                                                    
+                                                </div>
+                                                <script type="text/javascript">
+                                                    
+                                                            var $input    = document.getElementById('input-file'),
+                                                        $fileName = document.getElementById('file-name');
+
+                                                    $input.addEventListener('change', function(){
+                                                    $fileName.textContent = this.value;
+                                                    });
+    
+                                                </script>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                </div>                                    
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <label for="Endereço">Endereço: </label>
+                                    </div>
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <input class="dados" type="text" id="Endereço"   placeholder="R. Exemplo, 425">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <label for="bairro">Bairro: </label>
+                                    </div>
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <input class="dados" type="text" id="bairro"   placeholder="Vila exemplo">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <label for="CEP">CEP: </label>
+                                    </div>
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <input class="dados" type="number" id="CEP"   placeholder="00000000">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <label for="estado">Estado:</label>
+                                    </div>
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+
+                                            <select class="dados" id="estado" name="estado">
+                                                <option value="0">Selecione...</option>
+                                                <option value="1">Paraná</option>
+                                                <option value="2">Santa Catarina</option>
+                                                <option value="3">Rio Grande do Sul</option>
+                                            </select>
+                                    </div>
+                                </div>                               
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <label for="Cidade">Cidade:</label>    
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <input class="dados" type="text" id="Cidade"  >
+                                                </div>  
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <label for="comprovante">Comprovante de residência:</label>
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <label class="fake-input" for='input-file1'>Selecionar um arquivo &#10097;</label>
+                                                    <input class="button-file" id='input-file1'   type='file' value=''/>
+                                                    <span id='file-name1'></span>                                                    
+                                                </div>
+                                                <script type="text/javascript">
+                                                    
+                                                            var $input    = document.getElementById('input-file1'),
+                                                                $fileName1 = document.getElementById('file-name1');
+
+                                                    $input.addEventListener('change', function(){
+                                                    $fileName1.textContent = this.value;
+                                                    });    
+                                                </script>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                </div>                    
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <label for="telefone">Telefone: </label>                                    
+                                    </div>
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <input class="dados" type="text" id="telefone"   placeholder="(00) 00000-0000">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">                                        
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <label>Certidão de antecedentes criminais:</label>
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <label class="fake-input" for='input-file5'>Selecionar um arquivo &#10097;</label>
+                                                    <input class="button-file" id='input-file5'   type='file' value=''/>
+                                                    <span id='file-name5'></span>                                                    
+                                                </div>
+                                                <script type="text/javascript">
+                                                    
+                                                    var $input    = document.getElementById('input-file5'),
+                                                    $fileName5 = document.getElementById('file-name5');
+
+                                                    $input.addEventListener('change', function(){
+                                                    $fileName5.textContent = this.value;
+                                                    });    
+                                                </script>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <label for="Email">Email:</label>
+                                    </div>
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                            <input class="dados" type="email" id="Email"   placeholder="exemplo@exemplo.com">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <label for="Email">Confirmar Email:</label> 
+                                    </div>                                   
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                            <input class="dados" type="email" id="Email"   placeholder="exemplo@exemplo.com">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <label for="senha"> Senha: </label>
+                                    </div>
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                            <input class="dados" type="password" id="senha"  >
+                                    </div>
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <small id="passwordHelpInline" class="text-muted">
+                                            Deve ter entre 8 e 20 caracteres.
+                                          </small>
+                                    </div>                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <label for="senha">Confirmar Senha: </label>
+                                    </div>                                        
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <input class="dados" type="password" id="senha"  >
+                                    </div>
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <small id="passwordHelpInline" class="text-muted">
+                                            Deve ter entre 8 e 20 caracteres.
+                                          </small>
+                                    </div> 
+                                </div>
+                                <p class="boas-vindas">Sobre seu trabalho:</p>
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 cols-sm-12" style="padding: 0%;">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                    <label for="dias">Receber Chamados:</label>
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                    <select class="dados" name="dias" id="dias">
+                                                        <option value="0">Selecione</option>
+                                                        <option value="1">Todos os dias</option>
+                                                        <option value="2">Segunda a sexta</option>
+                                                        <option value="3">Finais de semana</option>
+                                                    </select>
+                                                </div>  
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 cols-sm-12">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <label for="horario">Hora dos chamados:</label>
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 0%;">
+                                                    <select class="dados" name="horario" id="horario">
+                                                        <option value="0">Selecione</option>
+                                                        <option value="1">Todo o dia</option>
+                                                        <option value="2">Apenas de manhã</option>
+                                                        <option value="3">Apenas de tarde</option>
+                                                        <option value="4">Apenas no meio do dia</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10" style="margin-top: 8px;" >
+                                        <div class="row">
+                                            <div class="col-auto" style=" padding-right: 0%;">
+                                                <input type="checkbox" class="check"    name="termos" id="termos">
+                                            </div>
+                                            <div class="col-auto" style="overflow: hidden; padding-left: 3px;">
+                                                <label class="termos" for="termos">Li e estou de acordo com os <a href="">termos e condições.</a> </label>
+                                            </div>
+                                        </div>                                      
+                                    </div>                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin: 20px auto; padding: 0;" >
+                                        <button type="submit" class="btn btn-primary">Cadastrar</button>                                      
+                                    </div>                                    
+                                </div>                                                                                       
+                        </fieldset>
+                    </form>
+                </row>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-10" style="margin: auto; padding:0;">
+                    <div style="width: fit-content; margin: auto;">
+                        <p class="inicio"> Voltar à <a href="../../index.html"> Página Inicial.</a></p>
+                    </div>
+                </div>
+            </div>
+       </div>
+       <!--formulário-->
+       
+        <div class="container-fluid">
+            <div class="row" style="background-color: #404040; height: 300px; margin-top: 40px;"></div>
+        </div>     
+    </body>
+</html>

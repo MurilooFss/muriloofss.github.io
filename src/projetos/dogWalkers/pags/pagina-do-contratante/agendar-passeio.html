@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Dog Walkers</title>    
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="../../js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="agendar.css">
+  </head>
+  <body>
+    <div class="container-fluid" style="background-color: #404040;">
+      <div class="row">
+        <div class="col-xl-5" style="margin: auto; padding: 0%;">
+          <div class="header" style="width: max-content;">
+            <div class="imagem"><a href="../../index.html" title="Início"><img src="../../img/logo.png" alt="logo"/></a></div>
+            <div class="texto"><a href="../../index.html" title="Início"><p>dog walkers</p></a></div>                        
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Header-->
+    <div class="container-fluid" style="border-bottom: 1px solid #dbdada ;">
+      <div class="container" style="max-width:900px;">
+        <div class="row">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0px; background-color: #ffffff !important; width: 100% !important;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav" style="width: 100%; border-right: 1px solid #dbdada; border-left: 1px solid #dbdada;">
+                <li class="nav-item ">
+                  <a class="nav-link" href="perfil-contratante.html"> <p>Página inicial</p> </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="agendar-passeio.html"><p> Agendar Passeio</p></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="historico.html"><p>Histórico</p></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #d2691e; font-size: 20px; font-family: Arial, Helvetica, sans-serif; text-transform: none; text-align: center; margin-top: 5px;">
+                    Opções
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="../../index.html"><p class="drop">Sair</p></a>
+                    <a class="dropdown-item" href="minha-conta.html"><p class="drop">Minha conta</p></a>
+                    <a class="dropdown-item" href="../login/pre-cadastro.html"><p>Desejo ser Walker</p></a>
+                    <a class="dropdown-item" href="suporte.html"><p class="drop">Suporte</p></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!--Menu-->
+    <div class="container" style="max-width: 900px;">
+      <form action="mensagem.html">
+        <fieldset>
+          <div class="row">
+            <div class="col-6" style="margin: auto; padding-top: 20px;">
+              <H2 style="color: #404040; text-align: center;">AGENDAR PASSEIO</H2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <label for="dia">Para qual dia deseja agendar o passeio?</label>             
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <select name="dia" id="dia">
+                <option value="0">Selecione...</option>
+                <option value="1"> Hoje, 25/06/2020 </option>
+                <option value="2"> Amanhã, 26/06/2020 </option>
+                <option value="3"> Sábado, 27/06/2020 </option>
+                <option value="4"> Domingo, 28/06/2020 </option>
+                <option value="5"> Segunda, 29/06/2020 </option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <label for="hora">Selecione um horário:</label>             
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <select name="hora" id="hora">
+                <option value="0">Selecione...</option>
+                <option value="1"> 10:00</option>
+                <option value="2"> 10:10 </option>
+                <option value="3"> 10:20 </option>
+                <option value="4"> 10:30 </option>
+                <option value="5"> 10:40 </option>
+                <option value="6"> 10:50 </option>
+                <option value="7"> 11:00 </option>
+                <option value="8"> 11:10 </option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <label for="tempo">Selecione o tempo de duração:</label>             
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <select name="tempo" id="tempo">
+                <option value="0">Selecione...</option>
+                <option value="1"> 10 minutos</option>
+                <option value="2"> 15 minutos </option>
+                <option value="3"> 20 minutos </option>
+                <option value="4"> 25 minutos </option>
+                <option value="5"> 30 minutos </option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <label for="distancia">Selecione a distância máxima que o Walker pode se afastar do ponto de saída:</label>             
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <select name="distancia" id="distancia">
+                <option value="0">Selecione...</option>
+                <option value="1"> 300 metros</option>
+                <option value="2"> 400 metros </option>
+                <option value="3"> 500 metros </option>
+                <option value="4"> 600 metros </option>
+                <option value="5"> 700 metros </option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <label for="ritmo">Selecione o ritmo do passeio:</label>             
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <select name="ritmo" id="ritmo">
+                <option value="0">Selecione...</option>
+                <option value="1">FORTE: Passeio acelerado, aquele que faz seu lindo pet cansar! Pela maior velocidade, a distância total do passeio é maior.</option>
+                <option value="2"> MODERADO: Passeio não muito forte, mas mantendo um ritmo constante para o seu pet se exercitar! </option>
+                <option value="3"> LEVE: Passeio para o seu pet cheirar tudo, aproveitar o tempo para se distrair sem cansar muito! </option>                
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-sm-12">
+              <label for="saida">Ponto de saída do passeio:</label>             
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <input type="text" name="saida" id="saida" required placeholder="Ex: R. Dr Levy Buquera, 500." >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <label for="referencia">Ponto de referência:</label>             
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <input type="text" name="referencia" required id="referencia" placeholder="Ex: Próximo ao posto de saúde">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <label>Método de pagamento:</label>             
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <input class="radio" type="radio" name="pagamento" required id="cartao" value="1">
+              <label for="cartao" style="margin-right: 15px;">Meu <strong style="color: #ff0000; font-weight: 700;">Master</strong><strong style="color: #dd9000; font-weight: 700;">Card</strong> </label>
+              <input class="radio" type="radio" name="pagamento" required id="dinheiro" value="2">
+              <label for="dinheiro" style="color: #008800;">Dinheiro</label>
+            </div>
+            <small id="passwordHelpInline" class="text-muted" style="padding-left: 15px;">
+              *Para adicionar outro cartão, acesse o menu "minha conta", e cadastre-o!
+            </small>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <label for="valor">Valor do passeio:</label>
+              <div class="col-12 valor">
+                <p>R$8,00~R$10,00</p>
+              </div>
+            </div>
+            <small id="passwordHelpInline" class="text-muted" style="padding-left: 15px;">
+              *O valor do passeio não ultrapassará os valores definidos acima!
+            </small>
+          </div>
+          <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin: 20px auto; padding: 0;" >
+              <button type="submit" class="btn btn-primary">Agendar</button>                                      
+            </div>                                    
+        </div> 
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="container-fluid" style="background-color: #404040; margin-top: 40px;">
+      <div class="row" style="height: 200px;"></div>
+    </div>
+  </body>
+</html>
