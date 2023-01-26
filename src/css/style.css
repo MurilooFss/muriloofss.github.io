@@ -23,6 +23,11 @@ a {
     color: #fff;
 }
 
+p {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
 header {
     position: fixed;
     background-color: var(--header-bg-color);
@@ -87,6 +92,10 @@ strong {
 }
 
 .about {
+    height: 70vh;
+}
+
+.data {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -97,6 +106,7 @@ strong {
 .container h3 {
     font-size: 2.8rem;
     text-align: center;
+    margin-top: 0;
 }
 
 .resume {
@@ -106,8 +116,6 @@ strong {
 
 .resume p {
     width: 80%;
-    color: #fff;
-    font-size: 1.5rem;
 }
 
 .skills {
@@ -201,6 +209,12 @@ strong {
 
 .projects {
     display: block;
+    height: 75vh;
+}
+
+.sub-title {
+    width: 70%;
+    margin: 15px auto;
 }
 
 
@@ -209,7 +223,7 @@ strong {
     align-items: center;
     justify-content: space-evenly;
     width: 75%;
-    margin: auto;
+    margin: 0 auto 60px auto;
 }
 
 .projects h2 {
@@ -262,10 +276,79 @@ strong {
     background-image: url(../img/projectspics/estacionamento-precos.png)
 }
 
+.git-btn {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: var(--header-bg-color);
+}
 
+.git-link {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
 
+.git-btn p {
+    font-size: 1.2rem;
+}
 
+.contact {
+    height: 60vh;
+}
 
+.contacts {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.contacts p {
+    font-size: 1.1rem;
+}
+
+.contacts h2 {
+    font-size: 1.8rem;
+}
+
+.each {
+    position: relative;
+    width: 25%;
+}
+
+.each::after {
+    position: absolute;
+    right: 2px;
+    top: 40%;
+    height: 40px;
+    width: 1px;
+    margin-left: -5px;
+    border-right: 1px solid #fff;
+    content: "";
+
+}
+
+.contacts img {
+    width: 100px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    filter: contrast(0%) brightness(350%);
+}
+
+.phone::after {
+    height: 0;
+    width: 0;
+    border-right: none;
+}
 
 
 @keyframes load {
@@ -285,6 +368,7 @@ strong {
         padding: 110px 30px 0;
         display: block;
         box-sizing: border-box;
+        height: 90vh;
     }
 
     .picture {
@@ -306,7 +390,11 @@ strong {
     }
 
     .about {
+        overflow: hidden;
+        height: auto;
+    }
 
+    .data {
         display: block;
     }
 
@@ -331,5 +419,30 @@ strong {
         overflow: hidden;
         overflow-x: auto;
         padding-bottom: 20px;
+    }
+
+    .contact {
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .contacts {
+        display: block;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .each {
+        margin: auto;
+        width: 80%;
+        padding: 40px 0 20px 0;
+        border-bottom: 1px solid #fff;
+    }
+
+    .each::after {
+        height: 0;
+        width: 0;
+        border-right: none;
     }
 }
