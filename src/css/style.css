@@ -325,6 +325,7 @@ strong {
     }
 
     .main-projects {
+        width: 88%;
         justify-content: left;
         overflow: hidden;
         overflow-x: auto;
