@@ -31,6 +31,7 @@ header {
     align-items: center;
     justify-content: center;
     width: 100vw;
+    z-index: 3;
 }
 
 .menu {
@@ -52,7 +53,6 @@ header a {
     padding-top: 100px;
     background-color: var(--primary-bg-color);
     height: 100vh;
-
 }
 
 
@@ -198,6 +198,75 @@ strong {
     content: "";
 }
 
+.projects {
+    display: block;
+}
+
+
+.main-projects {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 75%;
+    margin: auto;
+}
+
+.projects h2 {
+    width: 70%;
+    margin: 10px auto;
+}
+
+.project {
+    box-sizing: border-box;
+    padding: 20px;
+    height: 350px;
+    width: 300px;
+    min-height: 350px;
+    min-width: 300px;
+    background-color: var(--header-bg-color);
+    border-radius: 10px;
+    margin-right: 25px;
+}
+
+.project p {
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: var(--header-font);
+    margin: 10px 0 0;
+}
+
+.background-project {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 90%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+
+}
+
+.dogwalkers {
+    background-image: url(../img/projectspics/dogWalkers.png)
+}
+
+.countdown {
+    background-image: url(../img/projectspics/countdown.png)
+}
+
+.social {
+    background-image: url(../img/projectspics/redesSociais.png)
+}
+
+.parking {
+    background-image: url(../img/projectspics/estacionamento-precos.png)
+}
+
+
+
+
+
+
+
 @keyframes load {
     0% {
         width: 0;
@@ -253,5 +322,12 @@ strong {
 
     .skills {
         width: 100%;
+    }
+
+    .main-projects {
+        justify-content: left;
+        overflow: hidden;
+        overflow-x: auto;
+        padding-bottom: 20px;
     }
 }
