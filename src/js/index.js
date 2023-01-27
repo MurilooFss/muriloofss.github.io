@@ -6,13 +6,13 @@ function responsiveMenu() {
         if (menu.className === "menu") {
             menu.className += " responsive";
             outMenu.style.display = 'block';
-            section.style.maxHeight = '100vh'
             section.style.overflow = 'hidden'
+
         } else {
             menu.className = "menu";
             outMenu.style.display = 'none'
-            section.style.maxHeight = 'none'
             section.style.overflow = 'auto'
+
         }
     }
 }
