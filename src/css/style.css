@@ -2,6 +2,7 @@
     font-size: 12px;
     box-sizing: border-box;
     --primary-bg-color: #001a30;
+    --transparent-bg-color: #001a3077;
     --strong-color: #005BC0;
     --header-bg-color: #001425;
     --default-font: 'Poppins', sans-serif;
@@ -30,12 +31,10 @@ p {
 
 header {
     position: fixed;
+    top: 0;
     background-color: var(--header-bg-color);
     height: 90px;
     border-bottom: 1px solid #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100vw;
     z-index: 3;
 }
@@ -44,9 +43,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin: auto;
     width: 80%;
+    height: 100%;
 }
 
+.menu-icon {
+    display: none;
+}
 
 header a {
     font-family: var(--header-font);
@@ -361,6 +365,67 @@ strong {
 @media screen and (max-width: 600px) {
     :root {
         font-size: 12px;
+    }
+
+    .menu {
+        display: block;
+        width: 100%;
+        height: fit-content;
+    }
+
+    header {
+        height: 75px;
+    }
+
+    .menu a {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 4rem;
+        margin-left: 5px;
+    }
+
+    .responsive {
+        background-color: var(--header-bg-color);
+        position: absolute;
+        width: 60vw;
+        height: 100vh;
+        display: block;
+    }
+
+    .responsive .menu-icon {
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+
+
+
+    .responsive a {
+        color: #fff;
+        font-size: 2.4rem;
+        margin: 15px;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+
+    }
+
+    .responsive a:nth-child(2) {
+        margin-top: 70px;
+    }
+
+    .out-menu {
+        display: none;
+        background-color: var(--transparent-bg-color);
+        width: 100vw;
+        height: 100vh;
     }
 
     .home {
