@@ -355,11 +355,7 @@ strong {
 }
 
 
-@keyframes load {
-    0% {
-        width: 0;
-    }
-}
+
 
 
 @media screen and (max-width: 600px) {
@@ -371,6 +367,7 @@ strong {
         display: block;
         width: 100%;
         height: fit-content;
+
     }
 
     header {
@@ -396,6 +393,7 @@ strong {
         width: 60vw;
         height: 100vh;
         display: block;
+        animation: load 500ms normal forwards;
     }
 
     .responsive .menu-icon {
@@ -403,7 +401,6 @@ strong {
         position: absolute;
         right: 0;
     }
-
 
 
     .responsive a {
@@ -414,7 +411,7 @@ strong {
         text-align: center;
         border-bottom: 1px solid #ccc;
         padding-bottom: 10px;
-
+        animation: load 500ms normal forwards;
     }
 
     .responsive a:nth-child(2) {
@@ -515,5 +512,16 @@ strong {
         height: 0;
         width: 0;
         border-right: none;
+    }
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+        font-size: 0;
+    }
+
+    25% {
+        font-size: 0;
     }
 }
