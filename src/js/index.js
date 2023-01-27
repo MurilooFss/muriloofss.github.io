@@ -21,12 +21,47 @@ function responsiveMenu() {
 }
 document.querySelector('.menu-icon').addEventListener('click', () => {
     responsiveMenu()
+    getScroll()
 })
 document.querySelectorAll('.menu-item').forEach((item) => {
     item.addEventListener('click', () => {
         responsiveMenu()
+        getScroll()
     })
 })
 document.querySelector('.out-menu').addEventListener('click', () => {
     responsiveMenu()
+    getScroll()
 })
+
+function onload() {
+    let animation = document.querySelector('.animation')
+    if (!animation) {
+        let about = document.querySelector('.about')
+        let menu = document.querySelector('.menu')
+        let res = about.getBoundingClientRect().top - menu.getBoundingClientRect().top
+        console.log(res)
+        document.querySelectorAll('.progress-value').forEach((p) => {
+            if (window.screen.width > 500) {
+                if (res <= 550) {
+                    p.className += ' animation'
+                }
+            }
+            else {
+                if (res <= 360) {
+                    p.className += ' animation'
+                }
+            }
+
+        })
+
+    }
+}
+onload()
+
+function getScroll() {
+    document.addEventListener('scroll', () => {
+        onload()
+    })
+}
+getScroll()

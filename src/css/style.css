@@ -10,10 +10,19 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0 auto;
     font-family: var(--default-font);
     box-sizing: border-box;
+
+}
+
+section:target {
+    scroll-margin-top: .8rem;
 }
 
 h1,
@@ -83,36 +92,15 @@ header a {
 .greet {
     width: 40%;
     border-left: 1px solid #fff;
-    position: relative;
+    animation: load 1s normal forwards;
+
 }
 
 .greet h1 {
     text-align: center;
     font-size: 5rem;
     color: #fff;
-}
-
-.maior,
-.menor,
-.barra {
-    width: 80px;
-    position: absolute;
-    animation: go-back 800ms infinite alternate-reverse;
-}
-
-.maior {
-    left: 8.8rem;
-    top: 4rem;
-}
-
-.menor {
-    right: 3rem;
-    top: 11.5rem;
-}
-
-.barra {
-    right: 6rem;
-    top: 11.5rem;
+    animation: load 1s normal forwards;
 }
 
 strong {
@@ -185,8 +173,8 @@ strong {
     width: 100%;
 }
 
-.progress-value {
-    animation: load 3s normal forwards;
+.animation {
+    animation: loadProgress 3s normal forwards;
     border-radius: 100px;
     background: #fff;
     height: 25px;
@@ -220,7 +208,12 @@ strong {
     width: 40px;
     height: 25px;
     background-color: #fff;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--strong-color);
     border-radius: 5px;
 }
 
@@ -454,7 +447,7 @@ strong {
         padding: 110px 30px 0;
         display: block;
         box-sizing: border-box;
-        height: 90vh;
+        height: 85vh;
     }
 
     .picture {
@@ -464,11 +457,14 @@ strong {
 
     .picture img {
         width: 50vw;
+        animation: go-back 1s normal forwards;
+
     }
 
     .greet {
         width: auto;
         border: none;
+        animation: none;
     }
 
     .greet h1 {
@@ -476,22 +472,13 @@ strong {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
+        animation: loadv 2s normal forwards;
     }
 
-    .maior {
-        left: -2rem;
-        top: -1rem;
+    .greet strong {
+        animation: loadv 2s normal forwards;
     }
 
-    .menor {
-        right: -2rem;
-        top: 17rem;
-    }
-
-    .barra {
-        right: 1rem;
-        top: 17rem;
-    }
 
     .container h3 {
         margin-bottom: 15px;
@@ -572,12 +559,24 @@ strong {
     }
 }
 
+@keyframes loadProgress {
+    0% {
+        width: 0;
+
+    }
+}
+
+@keyframes loadv {
+    0% {
+
+        color: var(--primary-bg-color);
+
+    }
+}
+
 @keyframes go-back {
     0% {
-        transform: translateY(10px);
+        transform: translateY(-200px);
     }
 
-    100% {
-        transform: translateY(0);
-    }
 }
