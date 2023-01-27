@@ -40,15 +40,17 @@ function onload() {
         let about = document.querySelector('.about')
         let menu = document.querySelector('.menu')
         let res = about.getBoundingClientRect().top - menu.getBoundingClientRect().top
-        console.log(res)
+
         document.querySelectorAll('.progress-value').forEach((p) => {
             if (window.screen.width > 500) {
-                if (res <= 550) {
+                if (res <= 620) {
+
                     p.className += ' animation'
                 }
             }
             else {
-                if (res <= 360) {
+                if (res <= 300) {
+
                     p.className += ' animation'
                 }
             }
