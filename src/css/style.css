@@ -325,6 +325,7 @@ strong {
     width: 100vw;
     height: 100vh;
     top: 0;
+
 }
 
 .content-modal {
@@ -339,6 +340,7 @@ strong {
     top: 30vh;
     position: absolute;
     padding: 1rem;
+    animation: loadModal normal 500ms;
 
 }
 
@@ -348,14 +350,18 @@ strong {
     color: #fff;
     top: 1rem;
     right: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
     cursor: pointer;
+    animation: loadModalFont normal 650ms;
 
 }
 
 .diag-image {
     width: 30vw;
     float: left;
-    padding: 2rem;
+    padding: 2.5rem;
+    box-sizing: border-box;
 
 }
 
@@ -363,6 +369,7 @@ strong {
     aspect-ratio: 16/10;
     object-fit: contain;
     width: 100%;
+    animation: loadModal normal 500ms;
 }
 
 .intro {
@@ -370,8 +377,14 @@ strong {
     width: 40vw;
 }
 
+.intro p,
+strong {
+    animation: loadModalFont normal 650ms;
+}
+
 .intro h2 {
     margin-left: 0;
+    animation: loadModalFont normal 600ms;
 }
 
 .links {
@@ -379,6 +392,7 @@ strong {
     align-items: center;
     justify-content: space-between;
     width: 340px;
+    animation: loadModalFont normal 600ms;
 }
 
 .link-btn {
@@ -392,6 +406,7 @@ strong {
     border-radius: 10px;
     margin: auto;
     background-color: var(--primary-bg-color);
+    animation: loadModalFont normal 600ms;
 }
 
 
@@ -632,7 +647,7 @@ strong {
     }
 
     .diag-image {
-        width: 90%;
+        width: 100%;
     }
 
     .diag-image img {
@@ -714,6 +729,26 @@ strong {
 
         color: var(--primary-bg-color);
 
+    }
+}
+
+@keyframes loadModal {
+    0% {
+        height: 0;
+        width: 0;
+    }
+}
+
+@keyframes loadModalFont {
+    0% {
+        background-color: var(--header-bg-color);
+        color: transparent;
+        background-color: transparent;
+    }
+
+    75% {
+        background-color: transparent;
+        color: transparent;
     }
 }
 

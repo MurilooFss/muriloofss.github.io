@@ -1,20 +1,19 @@
 function responsiveMenu() {
     let menu = document.querySelector(".menu");
     let outMenu = document.querySelector('.out-menu')
-    let section = document.getElementsByTagName('body')[0]
-    let html = document.getElementsByClassName('html')[0]
+
     if (window.screen.width <= 600) {
         if (menu.className === "menu") {
             menu.className += " responsive";
             outMenu.style.display = 'block';
-            section.style.overflow = 'hidden'
-            html.style.overflow = 'hidden'
+            disableScroll()
+
 
         } else {
             menu.className = "menu";
             outMenu.style.display = 'none'
-            section.style.overflow = 'auto'
-            html.style.overflow = 'auto'
+            enableScroll()
+
 
         }
     }
@@ -33,7 +32,19 @@ document.querySelector('.out-menu').addEventListener('click', () => {
     responsiveMenu()
     getScroll()
 })
+function disableScroll() {
+    let section = document.getElementsByTagName('body')[0]
+    let html = document.getElementsByClassName('html')[0]
+    section.style.overflow = 'hidden'
+    html.style.overflow = 'hidden'
+}
+function enableScroll() {
+    let section = document.getElementsByTagName('body')[0]
+    let html = document.getElementsByClassName('html')[0]
+    section.style.overflow = 'auto'
+    html.style.overflow = 'auto'
 
+}
 function onload() {
     let animation = document.querySelector('.animation')
     if (!animation) {
@@ -70,8 +81,17 @@ getScroll()
 
 function modal(el) {
     el.style.display = 'flex';
+    disableScroll()
 }
 function closeModal(el) {
     el.style.display = 'none'
+    enableScroll()
 }
-dogwalkers.close()
+
+
+document.querySelectorAll('.out-modal').forEach((el) => {
+    el.addEventListener('click', (event) => {
+        if (event.target == el)
+            closeModal(el)
+    })
+})
