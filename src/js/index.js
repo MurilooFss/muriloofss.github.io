@@ -34,15 +34,15 @@ document.querySelector('.out-menu').addEventListener('click', () => {
 })
 function disableScroll() {
     let section = document.getElementsByTagName('body')[0]
-    let html = document.getElementsByClassName('html')[0]
+    let doc = document.getElementsByTagName('html')[0]
     section.style.overflow = 'hidden'
-    html.style.overflow = 'hidden'
+    doc.style.overflow = 'hidden'
 }
 function enableScroll() {
     let section = document.getElementsByTagName('body')[0]
-    let html = document.getElementsByClassName('html')[0]
+    let doc = document.getElementsByTagName('html')[0]
     section.style.overflow = 'auto'
-    html.style.overflow = 'auto'
+    doc.style.overflow = 'auto'
 
 }
 function onload() {
