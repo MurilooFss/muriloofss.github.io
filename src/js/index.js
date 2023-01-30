@@ -67,3 +67,11 @@ function getScroll() {
     })
 }
 getScroll()
+
+function modal(el) {
+    el.style.display = 'flex';
+}
+function closeModal(el) {
+    el.style.display = 'none'
+}
+dogwalkers.close()

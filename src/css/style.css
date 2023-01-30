@@ -2,7 +2,7 @@
     font-size: 12px;
     box-sizing: border-box;
     --primary-bg-color: #001a30;
-    --transparent-bg-color: #001a3077;
+    --transparent-bg-color: #001a309d;
     --strong-color: #005BC0;
     --header-bg-color: #001425;
     --default-font: 'Poppins', sans-serif;
@@ -253,6 +253,7 @@ strong {
 }
 
 .project {
+    cursor: pointer;
     box-sizing: border-box;
     padding: 20px;
     height: 350px;
@@ -312,6 +313,87 @@ strong {
     object-fit: contain;
 
 }
+
+.out-modal {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    border: none;
+    background-color: var(--transparent-bg-color);
+    border-radius: 10px;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+}
+
+.content-modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: none;
+    background-color: var(--header-bg-color);
+    border-radius: 10px;
+    width: 60vw;
+    height: 40vh;
+    top: 30vh;
+    position: absolute;
+    padding: 1rem;
+
+}
+
+
+.close {
+    position: absolute;
+    color: #fff;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+
+}
+
+.diag-image {
+    width: 50vw;
+    float: left;
+    padding: 2rem;
+
+}
+
+.diag-image img {
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    width: 100%;
+}
+
+.intro {
+    float: left;
+    width: 40vw;
+}
+
+.intro h2 {
+    margin-left: 0;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 340px;
+}
+
+.link-btn {
+    margin-top: 60px;
+    margin-right: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: var(--primary-bg-color);
+}
+
 
 .git-btn {
     margin-top: 60px;

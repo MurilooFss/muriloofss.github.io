@@ -104,7 +104,7 @@
                 <p class="sub-title">Dá uma olhada nesses projetos que eu trabalhei!</p>
                 <div class="main-projects">
 
-                    <a href="./src/projetos/dogWalkers/index.html" target="_blank">
+                    <div onclick="modal(dogwalkers)">
                         <div class="project">
                             <div class="background-project dogwalkers">
                             </div>
@@ -119,9 +119,37 @@
 
                             </div>
                         </div>
-                    </a>
+                    </div>
+                    <div id="dogwalkers" class="out-modal">
+                        <div class="content-modal">
+                            <span class="close" onclick="closeModal(dogwalkers)">X</span>
+                            <div class="diag-image">
+                                <img src="./src/img/projectspics/dogWalkers.png" alt="dogwalkers">
+                            </div>
+                            <div class="intro">
+                                <h2>
+                                    Dog Walkers
+                                </h2>
+                                <p>Projeto realizado com <strong>HTML, CSS, JavaScript e Bootstrap.</strong> A idéia do
+                                    projeto é um site em que após o cadastro será possível encontrar uma pessoa para
+                                    passear
+                                    com o seu pet.</p>
+                                <div class="links">
+                                    <a href="./src/projetos/dogWalkers/index.html" target="_blank">
+                                        <div class="link-btn">Visualizar site</div>
+                                    </a>
+                                    <a href="https://github.com/MurilooFss/dogWalkers" target="_blank">
+                                        <div class="link-btn">Acessar repositório</div>
+                                    </a>
 
-                    <a href="./src/projetos/countdown/index.html" target="_blank">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div onclick="modal(countdown)">
                         <div class="project">
                             <div class="background-project countdown">
                             </div>
@@ -132,12 +160,36 @@
                                 <img src="./src/img/assets/html.png" alt="HTML" srcset="">
                                 <img src="./src/img/assets/css.png" alt="css" srcset="">
                                 <img src="./src/img/assets/javascript.png" alt="javascript" srcset="">
-
-
                             </div>
                         </div>
-                    </a>
-                    <a href="http://" target="_blank">
+                    </div>
+                    <div id="countdown" class="out-modal">
+                        <div class="content-modal">
+                            <span class="close" onclick="closeModal(countdown)">X</span>
+                            <div class="diag-image">
+                                <img src="./src/img/projectspics/countdown.png" alt="countdown">
+                            </div>
+                            <div class="intro">
+                                <h2>
+                                    Countdown
+                                </h2>
+                                <p>Projeto realizado com <strong>HTML, CSS e JavaScript.</strong> A idéia do
+                                    projeto é um site em que é realizado uma contagem regressiva para uma data
+                                    pré-definida.</p>
+                                <div class="links">
+                                    <a href="./src/projetos/countdown/index.html" target="_blank">
+                                        <div class="link-btn">Visualizar site</div>
+                                    </a>
+                                    <a href="https://github.com/MurilooFss/countdown" target="_blank">
+                                        <div class="link-btn">Acessar repositório</div>
+                                    </a>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="modal(social)">
                         <div class="project">
                             <div class="background-project social">
                             </div>
@@ -149,8 +201,35 @@
                                 <img src="./src/img/assets/css.png" alt="css" srcset="">
                             </div>
                         </div>
-                    </a>
-                    <a href="http://" target="_blank">
+                    </div>
+                    <div id="social" class="out-modal">
+                        <div class="content-modal">
+                            <span class="close" onclick="closeModal(social)">X</span>
+                            <div class="diag-image">
+                                <img src="./src/img/projectspics/redesSociais.png" alt="redes sociais">
+                            </div>
+                            <div class="intro">
+                                <h2>
+                                    Redes Sociais
+                                </h2>
+                                <p>Projeto realizado com <strong>HTML e CSS.</strong> A idéia do
+                                    projeto é um site que disponibiliza os principais links do usuário.</p>
+                                <div class="links">
+                                    <a href="./src/projetos/countdown/index.html" target="_blank">
+                                        <div class="link-btn">Visualizar site</div>
+                                    </a>
+                                    <a href="https://github.com/MurilooFss/countdown" target="_blank">
+                                        <div class="link-btn">Acessar repositório</div>
+                                    </a>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div onclick="modal(parking)">
                         <div class="project">
                             <div class="background-project parking">
                             </div>
@@ -165,7 +244,33 @@
 
                             </div>
                         </div>
-                    </a>
+                    </div>
+                    <div id="parking" class="out-modal">
+                        <div class="content-modal">
+                            <span class="close" onclick="closeModal(parking)">X</span>
+                            <div class="diag-image">
+                                <img src="./src/img/projectspics/estacionamento-precos.png" alt="estacionamento">
+                            </div>
+                            <div class="intro">
+                                <h2>
+                                    Sistema de Estacionamento
+                                </h2>
+                                <p>Maior projeto em que já trabalhei, utilizei <strong>HTML, CSS, JavaScript, NodeJS,
+                                        Express, EJS e SQLite.</strong> O projeto é um sistema de controle de vagas e
+                                    preços para estacionamento, online e dinâmico.</p>
+                                <div class="links">
+                                    <a href="" target="_blank">
+                                        <div class="link-btn">Visualizar site</div>
+                                    </a>
+                                    <a href="https://github.com/MurilooFss/Sistema-gerenciamento" target="_blank">
+                                        <div class="link-btn">Acessar repositório</div>
+                                    </a>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                 </div>
