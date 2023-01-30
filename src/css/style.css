@@ -353,14 +353,14 @@ strong {
 }
 
 .diag-image {
-    width: 50vw;
+    width: 30vw;
     float: left;
     padding: 2rem;
 
 }
 
 .diag-image img {
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/10;
     object-fit: contain;
     width: 100%;
 }
@@ -618,6 +618,51 @@ strong {
     .projects {
         height: auto;
         padding-bottom: 60px;
+    }
+
+    .content-modal {
+        display: block;
+        width: 80vw;
+        top: 10vh;
+        right: 15vw;
+        height: auto;
+
+        padding: 1rem;
+
+    }
+
+    .diag-image {
+        width: 90%;
+    }
+
+    .diag-image img {
+        aspect-ratio: unset;
+        object-fit: fill;
+        width: 100%;
+    }
+
+    .intro {
+        width: 100%;
+        margin: auto;
+    }
+
+    .intro h2 {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .links {
+        display: block;
+    }
+
+    .link-btn {
+        margin-bottom: 10px;
+    }
+
+    .links a {
+        display: block;
+        margin: auto;
+        width: fit-content;
     }
 
     .contact {
